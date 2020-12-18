@@ -1,0 +1,42 @@
+body {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #343134;
+    width: 80%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section {
+    width: 100%;
+    /*display: flex;*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+
+#one-line {
+
+}
+
+#list {
+    background: #663399;
+}
+
+#lists {
+    background-color: #6f7c99;
+}
+
+p {
+    color: #000000;
+}
+
+#lists-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 40%;
+    margin-right: 40%;
+}
