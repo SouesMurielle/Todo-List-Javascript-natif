@@ -4,9 +4,9 @@ let listDiv = document.querySelector('#lists-list');
 let arrayList = [];
 
 class List {
-    constructor(listName, items= []) {
+    constructor(listName, items = []) {
         this.listName = listName;
-        this.items = items;
+        // this.items = items;
     }
 }
 
@@ -14,15 +14,18 @@ btn.addEventListener('click', addList);
 
 function addList() {
     if (input.value === '') {
-        input.placeholder= "Please choose a name";
+        input.reportValidity();
+        input.setCustomValidity('Please enter a name');
     } else {
         arrayList.push(new List(input.value, []));
         let newButton = document.createElement('button');
-        newButton.innerText = arrayList[arrayList.length-1].listName;
+        newButton.className = 'newList';
+        newButton.innerText = arrayList[arrayList.length - 1].listName;
         listDiv.append(newButton);
     }
 
 }
+
 
 //let paragraph = document.querySelector('#info');
 // paragraph.innerText = `${numberOfSeasons} seasons, ${numberOfEpisodes} episodes per season
